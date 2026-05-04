@@ -1,54 +1,95 @@
-# WOLF-Bench
-
 <div align="center">
-  <img src="assets/WOLF-Bench-icon.png" alt="WOLF-Bench" width="220" />
+  <img src="assets/WOLF-Bench-icon.png" alt="WOLF-Bench" width="240" />
 </div>
 
 <div align="center">
-  <p><b>WOLF-Bench</b> is a benchmark for evaluating real-world agentic workflows.</p>
-  <p><i>Dataset: coming soon.</i></p>
+  <h1>WOLF-Bench</h1>
+  <h3>A Benchmark for Real-World Agentic Workflows</h3>
 </div>
 
----
+<div align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#leaderboard">LeaderBoard</a> •
+  <a href="#wolf-bench-distribution">WOLF-Bench Distribution</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#arxiv-link">arXiv</a>
+</div>
 
-## 简介 / Overview
+<br>
 
-WOLF-Bench 面向 **Agent 评测**：关注模型在真实工作流中“读写文件、调用工具、多步规划与执行、产出可交付文件”的端到端能力。
+<div align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-TBD-lightgrey">
+  <img alt="Paper" src="https://img.shields.io/badge/paper-arXiv%20(coming%20soon)-blue">
+  <img alt="Dataset" src="https://img.shields.io/badge/dataset-coming%20soon-orange">
+  <img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-coming%20soon-green">
+</div>
 
-WOLF-Bench focuses on end-to-end agent capability in realistic workflows:
-tool use, multi-step planning/execution, file interaction, and producing deliverables.
+<div align="center">
+  Website (coming soon) • Paper (coming soon) • Leaderboard (coming soon)
+</div>
 
-## 框架图 / Framework
+<br>
 
-下面的框架图展示了 WOLF-Bench 的典型评测管线（任务 -> 运行 -> 统一产物 -> 评估 -> 汇总）：
+## Overview
 
-```mermaid
-flowchart TD
-  A[Task Suite\n(Instructions + Inputs)] --> B[Runner\n(Exec Agent in Sandbox)]
-  B --> C[Agent\n(LLM + Tools)]
-  C --> D[Workspace\n(Files / Artifacts)]
-  D --> E[Standard Outputs\n(agent.json / agent.log / output/ ...)]
-  E --> F[Judge\n(Rubrics / Metrics)]
-  F --> G[Leaderboard & Analysis]
-  E --> H[Visualization UI]
-```
+WOLF-Bench 1.0 is a benchmark for evaluating AI agents on **workspace tasks with large-scale file dependencies**. It is built to study a capability we call **Workspace Learning**: whether an agent can identify, reason over, exploit, and update explicit and implicit dependencies among heterogeneous files in a real worker's workspace.
 
-## 结果 / Results
+Unlike benchmarks that either place all information directly in the prompt or provide a small bundle of task-specific files, WOLF-Bench evaluates agents in realistic workspaces where they must independently explore directories, locate relevant evidence, understand cross-file relations, and produce correct deliverables. The benchmark is centered on real-world workplace behavior rather than isolated tool-use or single-file question answering.
 
-结果图与详细表格将随着论文最终版本同步更新（coming soon）。
+WOLF-Bench contains:
 
-> 结果占位图（后续替换为真实结果图）：
->
-> <img src="assets/WOLF-Bench-icon.png" alt="Results (coming soon)" width="420" />
+- **5** realistic worker profiles: Operations Manager, Logistics Manager, AI Product Manager, Researcher, and Backend Developer
+- **74** file types across heterogeneous workspace environments
+- **20,476** files, with workspaces scaling up to **20GB**
+- **388** tasks, each paired with an explicit file dependency graph
+- **7,399** fine-grained rubrics for evaluation
+- **WOLF-Bench-Lite**, a 100-task subset that preserves the benchmark distribution while reducing evaluation cost by about **70%**
 
-## 数据集 / Dataset
+The benchmark is designed to probe six critical dimensions of Workspace Learning, including workspace comprehension, heterogeneous file understanding, task-supporting file search, result-providing file aggregation, inter-file content relation capturing, and inter-file lineage relation tracing.
 
-- 数据集：**coming soon**
-- 我们会在发布时提供：任务说明、输入文件清单、标准化输出格式与评测脚本（如适用）。
+Our paper shows that current agents are still far from reliable on this setting. Across 4 agent harnesses and 7 foundation models, the average rubric pass rate is only **47.4%**, and the best configuration reaches **68.7%**, still below the **80.7%** achieved by humans with tools.
 
-## 引用 / Citation
+<div align="center">
+  <img src="assets/Framework.png" alt="WOLF-Bench framework overview" width="980" />
+</div>
 
-如果你在研究中使用 WOLF-Bench，请引用我们的论文（arXiv 信息待补全）：
+The figure above illustrates the overall design of WOLF-Bench. Agents are placed into role-specific workspaces with realistic cross-file dependent tasks, and are evaluated with capability-oriented rubrics that measure not only final correctness but also the ability to navigate complex workspace structure and file relations.
+
+## LeaderBoard
+
+<div align="center">
+  <img src="assets/rubrics_success.png" alt="Rubrics success rate across agent settings" width="980" />
+</div>
+
+The figure above shows rubric pass rates on WOLF-Bench-Lite across multiple combinations of agent harnesses and backbone LLMs.
+It highlights that strong foundation models matter, but harness design still plays a major role in efficiency, cost, and final performance.
+Detailed leaderboard tables, per-model breakdowns, and additional analyses will be released together with the public benchmark release.
+
+## WOLF-Bench Distribution
+
+The full dataset is **coming soon**.
+We plan to release task specifications, input files, standardized output formats, and evaluation scripts where applicable.
+
+<div align="center">
+  <img src="assets/Distribution.png" alt="WOLF-Bench dataset distribution" width="980" />
+</div>
+
+The distribution figure summarizes the current benchmark composition from several perspectives: file types, task abilities, task difficulty, workspace allocation, rubric counts, required files per task, and dependency edge counts.
+These statistics reflect the diversity and complexity of WOLF-Bench and show that the benchmark is not limited to a single file format, workspace style, or task pattern.
+In particular, WOLF-Bench covers multiple professional roles and difficulty levels, while preserving rich inter-file dependency structures that are essential for realistic workspace evaluation.
+
+## Quick Start
+
+**Coming soon.**
+
+We will release the dataset, evaluation pipeline, and example usage instructions for running agents on WOLF-Bench and WOLF-Bench-Lite.
+The public release will include the necessary task assets, output specifications, and benchmarking scripts.
+
+## arXiv Link
+
+Paper link: **coming soon**
+
+If you use WOLF-Bench in your research, please cite our paper once the arXiv version is available.
 
 ```bibtex
 @misc{wolfbench2026,
