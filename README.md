@@ -4,7 +4,7 @@
 
 <div align="center">
   <h1>WOLF-Bench</h1>
-  <h3>A Benchmark for Real-World Agentic Workflows</h3>
+  <h3>Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies</h3>
 </div>
 
 <div align="center">
@@ -13,6 +13,23 @@
   <a href="#wolf-bench-distribution">WOLF-Bench Distribution</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#arxiv-link">arXiv</a>
+</div>
+
+<br>
+
+<div align="center">
+  <a href="#overview">
+    <img alt="WOLF-Bench" src="https://img.shields.io/badge/WOLF--Bench-Workspace%20Learning-4c6ef5?logo=github&logoColor=white">
+  </a>
+  <a href="#arxiv-link">
+    <img alt="Paper" src="https://img.shields.io/badge/Paper-arXiv%20Coming%20Soon-b31b1b?logo=arxiv&logoColor=white">
+  </a>
+  <a href="#wolf-bench-distribution">
+    <img alt="Dataset" src="https://img.shields.io/badge/Dataset-Coming%20Soon-f59f00?logo=huggingface&logoColor=white">
+  </a>
+  <a href="#leaderboard">
+    <img alt="Leaderboard" src="https://img.shields.io/badge/Leaderboard-Coming%20Soon-2f9e44?logo=googleanalytics&logoColor=white">
+  </a>
 </div>
 
 ## Overview
@@ -83,4 +100,3 @@ If you use WOLF-Bench in your research, please cite our paper once the arXiv ver
   url          = {https://arxiv.org/abs/TODO}
 }
 ```
-
