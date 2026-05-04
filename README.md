@@ -15,21 +15,6 @@
   <a href="#arxiv-link">arXiv</a>
 </div>
 
-<br>
-
-<div align="center">
-  <img alt="License" src="https://img.shields.io/badge/license-TBD-lightgrey">
-  <img alt="Paper" src="https://img.shields.io/badge/paper-arXiv%20(coming%20soon)-blue">
-  <img alt="Dataset" src="https://img.shields.io/badge/dataset-coming%20soon-orange">
-  <img alt="Leaderboard" src="https://img.shields.io/badge/leaderboard-coming%20soon-green">
-</div>
-
-<div align="center">
-  Website (coming soon) • Paper (coming soon) • Leaderboard (coming soon)
-</div>
-
-<br>
-
 ## Overview
 
 WOLF-Bench 1.0 is a benchmark for evaluating AI agents on **workspace tasks with large-scale file dependencies**. It is built to study a capability we call **Workspace Learning**: whether an agent can identify, reason over, exploit, and update explicit and implicit dependencies among heterogeneous files in a real worker's workspace.
@@ -44,10 +29,6 @@ WOLF-Bench contains:
 - **388** tasks, each paired with an explicit file dependency graph
 - **7,399** fine-grained rubrics for evaluation
 - **WOLF-Bench-Lite**, a 100-task subset that preserves the benchmark distribution while reducing evaluation cost by about **70%**
-
-The benchmark is designed to probe six critical dimensions of Workspace Learning, including workspace comprehension, heterogeneous file understanding, task-supporting file search, result-providing file aggregation, inter-file content relation capturing, and inter-file lineage relation tracing.
-
-Our paper shows that current agents are still far from reliable on this setting. Across 4 agent harnesses and 7 foundation models, the average rubric pass rate is only **47.4%**, and the best configuration reaches **68.7%**, still below the **80.7%** achieved by humans with tools.
 
 <div align="center">
   <img src="assets/Framework.png" alt="WOLF-Bench framework overview" width="980" />
@@ -102,3 +83,4 @@ If you use WOLF-Bench in your research, please cite our paper once the arXiv ver
   url          = {https://arxiv.org/abs/TODO}
 }
 ```
+
