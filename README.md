@@ -70,19 +70,19 @@ The public release will include the necessary task assets, output specifications
 
 ## arXiv Link
 
-Paper link: **coming soon**
+Paper link: https://arxiv.org/abs/2605.03596
 
 If you use Workspace-Bench in your research, please cite our paper once the arXiv version is available.
 
 ```bibtex
-@misc{Workspacebench2026,
-  title        = {Workspace-Bench: A Benchmark for Real-World Agentic Workflows},
-  author       = {TODO: Authors},
-  year         = {2026},
-  eprint       = {TODO: arXiv-ID},
-  archivePrefix= {arXiv},
-  primaryClass = {cs.CL},
-  url          = {https://arxiv.org/abs/TODO}
+@misc{tang2026workspacebench10benchmarkingai,
+      title={Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies}, 
+      author={Zirui Tang and Xuanhe Zhou and Yumou Liu and Linchun Li and Weizheng Wang and Hongzhang Huang and Jun Zhou and Jiachen Song and Shaoli Yu and Jinqi Wang and Zihang Zhou and Hongyi Zhou and Yuting Lv and Jinyang Li and Jiashuo Liu and Ruoyu Chen and Chunwei Liu and GuoLiang Li and Jihua Kang and Fan Wu},
+      year={2026},
+      eprint={2605.03596},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2605.03596}, 
 }
 ```
 
